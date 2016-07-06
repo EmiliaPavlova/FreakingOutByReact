@@ -6,8 +6,7 @@ class Avatar extends Component {
     this.state = {avatar: {}};
   }
   componentDidMount() {
-    // let url="https://api.github.com/users/" + this.props.pic.avatar_url;
-    let url="https://api.github.com/users/emiliapavlova";
+    let url="https://api.github.com/users/EmiliaPavlova";
     $.ajax({
       url: url,
       data: 'get',
@@ -17,13 +16,13 @@ class Avatar extends Component {
         });
       }.bind(this)
     });
-  }
+}
 
   render() {
-    console.log(this.state.avatar_url);
+    console.log('avatar url: ' + this.state.avatar.avatar_url);
     return (
       <div>
-        <img src={this.state.avatar.avatar_url !== "" 
+        <img src={this.state.avatar !== undefined 
                 ? this.state.avatar.avatar_url 
                 : null} width="80px;" />
       </div>

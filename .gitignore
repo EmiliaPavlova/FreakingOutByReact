@@ -3,4 +3,4 @@ logs/*
 node_modules/
 test
 .vscode
-npm-debug.log
+npm-debug.log.1328525288

@@ -22,7 +22,7 @@ class Url extends Component {
     });
   }
 
-  render() {        
+  render() {     
     let repos = this.state.data.map(function(link, i) { 
     return (
         <div key={i}>
@@ -33,17 +33,18 @@ class Url extends Component {
         </div>
       );
     });
+    console.log('name: ' + this.state.name)
     return (
       <div>
         <h3>Some GitHub Staff</h3>
-        <Avatar />
+        {/*<Avatar pic={this.state.name} />*/}
         <input type="text" 
                 placeholder="GitHub username" 
                 value={this.state.name} onChange={this.onChange.bind(this)} />
         <input type="submit" value="Submit" onClick={this.handleSubmit.bind(this)} />
         {repos}
       </div>
-    )
+    ) 
   }
 }
 
