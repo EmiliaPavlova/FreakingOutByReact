@@ -6,7 +6,7 @@ import Sleepy from './Sleepy.js'
 import Checkbox from './Checkbox.js'
 import GitHub from './GitHub.js'
 import Url from './Url.js'
-import UrlDynamic from './UrlDynamic'
+import UrlDynamic from './UrlDynamic.js'
 
 class App extends Component {
   constructor(props) {

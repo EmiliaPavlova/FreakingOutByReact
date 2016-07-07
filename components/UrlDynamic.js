@@ -1,13 +1,14 @@
 import React, { Component, PropTypes } from 'react'
 import Avatar from './Avatar.js'
 
-class Url extends Component {
+class UrlDynamic extends Component {
   constructor(props) {
     super(props);
     this.state = {name: ''};
     this.state = {data: []};
   }
   onChange(e) {
+    e.preventDefault();
     this.setState({name: e.target.value});
   }
   handleSubmit(e) {
@@ -33,19 +34,23 @@ class Url extends Component {
         </div>
       );
     });
-    console.log('name: ' + this.state.name)
+    console.log('this.state.data.owner: ' + this.state.data.owner)
+    // debugger
     return (
       <div>
         <h3>Some GitHub Staff</h3>
-        {/*<Avatar pic={this.state.name} />*/}
+        {this.state.data[0] ? <Avatar picName={this.state.data[0].owner.avatar_url} /> : null}
         <input type="text" 
-                placeholder="GitHub username" 
-                value={this.state.name} onChange={this.onChange.bind(this)} />
-        <input type="submit" value="Submit" onClick={this.handleSubmit.bind(this)} />
+               placeholder="GitHub username" 
+               value={this.state.name} 
+               onChange={this.onChange.bind(this)} />
+        <input type="submit" 
+               value="Submit" 
+               onClick={this.handleSubmit.bind(this)} />
         {repos}
       </div>
     ) 
   }
 }
 
-export default Url
+export default UrlDynamic
