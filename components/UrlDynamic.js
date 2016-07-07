@@ -35,7 +35,6 @@ class UrlDynamic extends Component {
       );
     });
     console.log('this.state.data.owner: ' + this.state.data.owner)
-    // debugger
     return (
       <div>
         <h3>Some GitHub Staff</h3>
