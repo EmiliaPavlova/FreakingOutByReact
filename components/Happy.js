@@ -1,4 +1,4 @@
-import React, {Component, PropTypes } from 'react'
+import React, {Component, PropTypes } from 'react';
 
 class Happy extends Component {
     constructor(props) {
@@ -14,23 +14,23 @@ class Happy extends Component {
         this.setState({count: this.state.count - 1});
     }
     render() {
-      return (
-        <div className="changePoints">
-          <p>
-            Happy: {this.state.count} points
-            {' '}
-          </p>
-          <button onClick={this.increaseCount}>
-            HappyUp :)
-          </button>
-          <button onClick={this.decreaseCount}>
-            HappyDown :(
-          </button>
-        </div>
-       );
+        return (
+          <div className='changePoints'>
+            <p>
+              Happy: {this.state.count} points
+              {' '}
+            </p>
+            <button onClick={this.increaseCount}>
+              HappyUp :)
+            </button>
+            <button onClick={this.decreaseCount}>
+              HappyDown :(
+            </button>
+          </div>
+        );
     }
 }
 Happy.PropTypes = { count: React.PropTypes.number };
 Happy.defaultProps = { count: 0 };
 
-export default Happy
+export default Happy;

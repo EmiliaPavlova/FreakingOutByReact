@@ -1,18 +1,18 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react';
 
 class Avatar extends Component {
-  constructor(props) {
-    super(props);
-  }
+    constructor(props) {
+      super(props);
+    }
 
-  render() {
-    console.log("picName: " + this.props.picName)
-    return (
-      <div>
-        <img src={this.props.picName} width="80px;" />
-      </div>
-    )
-  }
+    render() {
+        console.log('picName: ' + this.props.picName);
+        return (
+          <div>
+            <img src={this.props.picName} width='80px;' />
+          </div>
+        );
+    }
 }
 
-export default Avatar
+export default Avatar;

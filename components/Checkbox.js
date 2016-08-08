@@ -1,4 +1,4 @@
-import React, {Component, PropTypes } from 'react'
+import React, {Component, PropTypes } from 'react';
 
 class Checkbox extends Component {
     constructor(props) {
@@ -14,15 +14,12 @@ class Checkbox extends Component {
         return (
             <div>
                 <h3>
-                    <input type="checkbox" 
-                           name="sunny" 
-                           checked={this.state.value}
-                           onChange={this.toggleChange} />  
-                <span className={className}>Am I checked?</span> {this.state.isChecked ? 'yep' : ''}
-                </h3>       
+                    <input type='checkbox' name='sunny' checked={this.state.value} onChange={this.toggleChange} />
+                    <span className={className}>Am I checked?</span> {this.state.isChecked ? 'yep' : ''}
+                </h3>
             </div>
-        )
+        );
     }
 }
 
-export default Checkbox
+export default Checkbox;
