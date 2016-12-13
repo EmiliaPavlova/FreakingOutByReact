@@ -9,11 +9,18 @@ class Other extends Component {
     changeName(e) {
         this.setState({name: e.target.value});
     }
+    get message () {
+        const { name } = this.state;
+        const { gettingCrazy } = this.props;
+
+        return 'Hello, ' + (name ? `I\'m ${name} and ` : '') + 'I\'m ' + gettingCrazy;
+    }
     render() {
+        const { name } = this.state;
         return (
           <div>
             <input type='text' placeholder='Your name' value={this.state.name} onChange={this.changeName} />
-            <h2>Hello, I'm{' '}{this.state.name}{' '}and I'm {this.props.gettingCrazy}</h2>
+            <h2>{this.message}</h2>
           </div>
         );
     }
